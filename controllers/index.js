@@ -8,13 +8,10 @@ const {
   } = require("./contacts")
 
 module.exports = {
-  {
     getContacts,
     getContactById,
     addContact,
     updateContact,
     removeContact,
-    updateFavorite,
-  }
-    
+    updateFavorite, 
 }
