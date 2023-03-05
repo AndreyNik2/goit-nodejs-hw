@@ -7,7 +7,8 @@ const {
   updateContact,
   removeContact,
   updateFavorite,
-} = require("../../controllers");
+} = require("../../controllers/contacts");
+// const { contactsControlers } = "../../controllers";
 const { schemas } = require("../../models/contact");
 const { validateBody, isValidId } = require("../../middlewares");
 
