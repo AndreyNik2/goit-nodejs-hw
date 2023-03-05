@@ -1,5 +1,20 @@
-const contactsControlers = require("./contacts")
+const {
+    getContacts,
+    getContactById,
+    addContact,
+    updateContact,
+    removeContact,
+    updateFavorite,
+  } = require("./contacts")
 
 module.exports = {
-    contactsControlers,
+  {
+    getContacts,
+    getContactById,
+    addContact,
+    updateContact,
+    removeContact,
+    updateFavorite,
+  }
+    
 }
