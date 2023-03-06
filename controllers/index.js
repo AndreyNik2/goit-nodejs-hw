@@ -1,17 +1,23 @@
 const {
-    getContacts,
-    getContactById,
-    addContact,
-    updateContact,
-    removeContact,
-    updateFavorite,
-  } = require("./contacts")
+  getContacts,
+  getContactById,
+  addContact,
+  updateContact,
+  removeContact,
+  updateFavorite,
+} = require("./contacts");
+const { register, login, getCurrent, logout,  } = require("./auth");
 
 module.exports = {
-    getContacts,
-    getContactById,
-    addContact,
-    updateContact,
-    removeContact,
-    updateFavorite, 
-}
+  getContacts,
+  getContactById,
+  addContact,
+  updateContact,
+  removeContact,
+  updateFavorite,
+  register,
+  login,
+  getCurrent,
+  logout,
+  
+};
