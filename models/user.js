@@ -14,21 +14,25 @@ const userSchema = new Schema(
       unique: true,
       type: String,
       match: emailRegexp,
-      required: [true, 'Email is required'],
+      required: [true, "Email is required"],
     },
     password: {
       type: String,
       minlength: 6,
-      required: [true, 'Set password for user'],
+      required: [true, "Set password for user"],
     },
     subscription: {
-        type: String,
-        enum: ["starter", "pro", "business"],
-        default: "starter"
-      },
+      type: String,
+      enum: ["starter", "pro", "business"],
+      default: "starter",
+    },
     token: {
       type: String,
       default: "",
+    },
+    avatarURL: {
+      type: String,
+      required: true,
     },
   },
   { versionKey: false, timestamps: true }
@@ -47,9 +51,14 @@ const loginSchema = Joi.object({
   password: Joi.string().required(),
 });
 
+const subscriptionSchema = Joi.object({
+  subscription: Joi.string().valid('starter', 'pro', 'business')
+})
+
 const schemas = {
   registerSchema,
   loginSchema,
+  subscriptionSchema,
 };
 
 const User = model("user", userSchema);
